@@ -12,7 +12,7 @@ public class Demo : MonoBehaviour
         var dateTimeNow = DateTime.Now;
         LocalValue.text = string.Format("{0} {1}", dateTimeNow.ToShortDateString(), dateTimeNow.ToLongTimeString());
 
-        if (NtpDateTime.Instance.DateSynchronized)
+        if (NtpDateTime.Instance.IsTimeSynchronized)
         {
             var ntpDateTimeNow = NtpDateTime.Instance.Now;
             NtpValue.text = string.Format("{0} {1}", ntpDateTimeNow.ToShortDateString(), ntpDateTimeNow.ToLongTimeString());
